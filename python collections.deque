@@ -1,0 +1,30 @@
+from collections import deque
+d=deque()
+lst = []
+lst1 = []
+count=input()
+
+for i in range(6):
+    name=input()
+    lst.append(name)
+
+for i in range(6):
+    if "append" in lst[i]:
+        var=lst[i]
+        for j in range(len(var)):
+            if var[j].isdigit()==True:
+                m=var[j]
+                d.append(m)
+    if "appendleft" in lst[i]:
+        var=lst[i]
+        for j in range(len(var)):
+            if var[j].isdigit()==True:
+                l=var[j]
+                d.appendleft(l)
+    if "pop" in lst[i]:
+        d.pop()
+    if "popleft" in lst[i]:
+        d.popleft()
+for i in range(len(d)):
+    print(d[i] ,end=" ")
+                          
