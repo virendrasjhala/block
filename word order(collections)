@@ -1,0 +1,28 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+from __future__ import print_function
+lst = []
+lst1= []
+count=0
+n_c=0
+n=input()
+if 1<=n and n<=10*5:
+    for i in range(n):
+        str1=raw_input()
+        if len(str1)<=10*6:
+            lst.append(str1.lower())
+for j in range(len(lst)):
+    if lst[j] in lst:
+        total=len(lst)
+        total=total-1
+print(total)
+for k in range(total):
+    if lst[k] in lst:
+        val=lst[k]
+        value=lst.count(val)
+        if value>=2:
+            lst1.append(value)
+            del(lst[k])
+        else:
+            lst1.append(value)
+for i in lst1:
+    print(i,end=' ')
